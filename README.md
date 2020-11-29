@@ -10,10 +10,10 @@ This repo contains the implementation for named entity recognition (NER) using T
 ### File Structure
 ```
 |-TRAX_NER
-|   |-data_loader.py
-|   |-model.py
-|   |-trainer.py
-|   |-utils.py
+|   |-data_loader.py -> # contains the data generator function 
+|   |-model.py       -> # model definition   
+|   |-trainer.py     -> # training loop   
+|   |-utils.py       -> # data loading and vocab extraction   
 |-README.md
-|-train.py
+|-train.py           -> # link to the TRAX_NER/trainer.py
 ```
