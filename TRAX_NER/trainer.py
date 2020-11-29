@@ -16,6 +16,10 @@ from model import NER
 from data_loader import data_generator
 import argparse
 
+# make the output dir
+if not os.path.exists(args.output_dir):
+    os.makedirs(args.output_dir)
+
 # data import
 vocab, tag_map = get_vocab('data/large/words.txt', 'data/large/tags.txt')
 t_sentences, t_labels, t_size = get_params(vocab, tag_map, 'data/large/train/sentences.txt', 'data/large/train/labels.txt')
