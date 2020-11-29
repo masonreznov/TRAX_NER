@@ -1,2 +1,3 @@
 # Ignore the local .ipynb notebooks
 Local_notebooks/
+data/
