@@ -53,12 +53,12 @@ def main_train():
     model = NER(vocab_size=args.vocab_size, d_model=args.d_model, tags=tag_map)
     batch_size = args.batch_size
 
-    # Create training data, mask pad id=35180 for training.
+    # Create training data, mask pad for training.
     train_generator = trax.supervised.inputs.add_loss_weights(
         data_generator(batch_size, t_sentences, t_labels, vocab['<PAD>'], True),
         id_to_mask=vocab['<PAD>'])
 
-    # Create validation data, mask pad id=35180 for training.
+    # Create validation data, mask pad for training.
     eval_generator = trax.supervised.inputs.add_loss_weights(
         data_generator(batch_size, v_sentences, v_labels, vocab['<PAD>'], True),
         id_to_mask=vocab['<PAD>'])
