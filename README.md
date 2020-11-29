@@ -8,6 +8,7 @@ This repo contains the implementation for named entity recognition (NER) using T
 - [numpy](https://numpy.org/)
 
 ### File Structure
+```
 |-TRAX_NER
 |   |-data_loader.py
 |   |-model.py
@@ -15,3 +16,4 @@ This repo contains the implementation for named entity recognition (NER) using T
 |   |-utils.py
 |-README.md
 |-train.py
+```
