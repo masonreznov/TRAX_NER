@@ -16,6 +16,25 @@ from model import NER
 from data_loader import data_generator
 import argparse
 
+
+# import the arguments
+parser = argparse.ArgumentParser(description='Create a ArcHydro schema')
+parser.add_argument('--vocab-size', type=int, required=False,
+                    help='the input size, if not given the extracted vocab size value is used')
+parser.add_argument('--d-model', type=int, required=False,
+                    help='LSTM embedding and hidden layer dimension')
+parser.add_argument('--batch-size', type=int, required=True,
+                    help='model batch size')
+parser.add_argument('--train-steps', type=int, required=False,
+                    help='total training steps, if not given the training will be done for a single step')
+                    
+parser.add_argument('--output-dir', metavar='path', type=str, required=True,
+                    help='output path where model is written')
+                    
+args = parser.parse_args()
+
+
+
 # make the output dir
 if not os.path.exists(args.output_dir):
     os.makedirs(args.output_dir)
@@ -80,22 +99,5 @@ def train_model(model, train_generator, eval_generator, train_steps=1, output_di
 train_steps = args.train_steps            
 
 # Train the model
-training_loop = train_model(NER(), train_generator, eval_generator, train_steps)
-
-if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description='Create a ArcHydro schema')
-    parser.add_argument('--vocab-size', type=int, required=False,
-                        help='the input size, if not given the extracted vocab size value is used')
-    parser.add_argument('--d-model', type=int, required=False,
-                        help='LSTM embedding and hidden layer dimension')
-    parser.add_argument('--batch-size', type=int, required=True,
-                        help='model batch size')
-    parser.add_argument('--train-steps', type=int, required=False,
-                        help='total training steps, if not given the training will be done for a single step')
-                        
-    parser.add_argument('--output-dir', metavar='path', type=str, required=True,
-                        help='output path where model is written')
-                        
-    args = parser.parse_args()
-
+training_loop = train_model(model, train_generator, eval_generator, train_steps)
 
