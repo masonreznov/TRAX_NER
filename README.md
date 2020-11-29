@@ -2,6 +2,6 @@
 This repo contains the implementation for named entity recognition (NER) using TRAX library
 
 ### Requirements
-- trax
+- [trax](https://github.com/google/trax)
 - pandas
 - numpy
