@@ -17,7 +17,11 @@ This repo contains the implementation for named entity recognition (NER) using T
 |-README.md
 |-train.py           -> # link to the TRAX_NER/trainer.py
 ```
-### Usage
+### Data
+- Download this kaggle NER [data](https://www.kaggle.com/abhinavwalia95/entity-annotated-corpus). 
+- Extract and place it in the `data/` directory.
+### Training
+
 ```
 python train.py \
 --output_dir <path/to/output> \
@@ -26,3 +30,4 @@ python train.py \
 --batch_size 32 \
 --train_steps 100
 ```
+- Data loading, vocab extraction and other preliminaries are passed as a pipeline in the `TRAX_NER/trainer.py` file.
