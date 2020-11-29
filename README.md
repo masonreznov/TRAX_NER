@@ -31,3 +31,8 @@ python train.py \
 --train_steps 100
 ```
 - Data loading, vocab extraction and other preliminaries are passed as a pipeline in the `TRAX_NER/trainer.py` file.
+
+### TODO's
+- [ ] Preprocessing.
+- [ ] Performance evaluation on standard data.
+- [ ] Extension to other NLP deeplearning arcitechtures like `Transformer` and pre-trained models like `BERT`, `XLNet`.
