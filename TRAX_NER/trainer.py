@@ -6,7 +6,6 @@ Description: Contains the training function for the NER system using LSTM networ
 
 """
 import trax
-from trax import layers as tl
 from trax.supervised import training
 import os 
 import numpy as np

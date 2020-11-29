@@ -5,7 +5,7 @@ Last modified: 2020/09/12
 Description: Contains the data loader 
 
 """
-
+import numpy as np
 
 # data generator
 def data_generator(batch_size, x, y, pad, shuffle=False, verbose=False):
