@@ -1,4 +1,4 @@
-## TRAX_NER
+## TRAX_NER -- Named Entity Recognition with LSTM network using TRAX library
 This repo contains the implementation for named entity recognition (NER) using TRAX library
 
 ### Requirements
