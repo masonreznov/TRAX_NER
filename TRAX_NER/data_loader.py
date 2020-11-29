@@ -2,7 +2,8 @@
 Author: Michael Salam
 Date created: 2020/09/12
 Last modified: 2020/09/12
-Description: Contains the data loader 
+Description: Contains the data generator
+
 
 """
 import numpy as np
