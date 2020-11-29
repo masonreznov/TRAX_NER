@@ -1,3 +1,14 @@
+"""
+This code is refered from the deeplearning.ai course 'NLP with sequence model' assignment
+"""
+def get_data(url):
+    """
+    todo: given the url, download the data and store it in a suitable place
+    """
+    pass
+
+
+
 def get_vocab(vocab_path, tags_path):
     vocab = {}
     with open(vocab_path) as f:
