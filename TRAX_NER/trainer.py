@@ -76,11 +76,7 @@ def train_model(model, train_generator, eval_generator, train_steps=1, output_di
     training_loop.run(n_steps = train_steps)
     return training_loop
 
-# training loop
-train_steps = args.train_steps            
 
-# Train the model
-training_loop = train_model(NER(), train_generator, eval_generator, train_steps)
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Create a ArcHydro schema')
@@ -98,4 +94,9 @@ if __name__ == '__main__':
                         
     args = parser.parse_args()
 
+    # training loop
+    train_steps = args.train_steps            
+
+    # Train the model
+    training_loop = train_model(NER(), train_generator, eval_generator, train_steps)
 
