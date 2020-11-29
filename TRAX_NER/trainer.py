@@ -7,6 +7,7 @@ Description: Contains the training function for the NER system using LSTM networ
 """
 import trax
 from trax.supervised import training
+from trax import layers as tl
 import os 
 import numpy as np
 import pandas as pd
