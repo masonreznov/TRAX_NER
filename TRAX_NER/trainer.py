@@ -50,7 +50,9 @@ def main_train():
     vocab_size = len(vocab)
 
     # initializing the model
-    model = NER(vocab_size=args.vocab_size, d_model=args.d_model, tags=tag_map)
+    if args.vocab_size:
+        vocab_size = args.vocab_size
+    model = NER(vocab_size=vocab_size, d_model=args.d_model, tags=tag_map)
     batch_size = args.batch_size
 
     # Create training data, mask pad for training.
@@ -100,5 +102,6 @@ def main_train():
     train_steps = args.train_steps            
 
     # Train the model
-    training_loop = train_model(model, train_generator, eval_generator, train_steps)
+    # training_loop = train_model(model, train_generator, eval_generator, train_steps)
+    train_model(model, train_generator, eval_generator, train_steps)
 
