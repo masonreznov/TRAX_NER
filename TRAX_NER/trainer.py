@@ -43,10 +43,10 @@ eval_generator = trax.supervised.inputs.add_loss_weights(
     data_generator(batch_size, v_sentences, v_labels, vocab['<PAD>'], True),
     id_to_mask=vocab['<PAD>'])
 
-def train_model(NER, train_generator, eval_generator, train_steps=1, output_dir=args.output_dir):
+def train_model(model, train_generator, eval_generator, train_steps=1, output_dir=args.output_dir):
     '''
     Input: 
-        NER - the model you are building
+        model - the model we are building
         train_generator - The data generator for training examples
         eval_generator - The data generator for validation examples,
         train_steps - number of training steps
@@ -67,7 +67,7 @@ def train_model(NER, train_generator, eval_generator, train_steps=1, output_dir=
     )
 
     training_loop = training.Loop(
-        NER, # A model to train
+        model, # A model to train
         train_task, # A train task
         eval_task = eval_task, # The evaluation task
         output_dir = output_dir) # The output directory
@@ -90,6 +90,9 @@ if __name__ == '__main__':
                         help='LSTM embedding and hidden layer dimension')
     parser.add_argument('--batch-size', type=int, required=True,
                         help='model batch size')
+    parser.add_argument('--train-steps', type=int, required=False,
+                        help='total training steps, if not given the training will be done for a single step')
+                        
     parser.add_argument('--output-dir', metavar='path', type=str, required=True,
                         help='output path where model is written')
                         
