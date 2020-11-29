@@ -24,11 +24,11 @@ This repo contains the implementation for named entity recognition (NER) using T
 
 ```
 python train.py \
---output_dir <path/to/output> \
---vocab_size 32000 \
---d_model 512 \
---batch_size 32 \
---train_steps 100
+    --output_dir <path/to/output> \
+    --vocab_size 32000 \
+    --d_model 512 \
+    --batch_size 32 \
+    --train_steps 100
 ```
 - Data loading, vocab extraction and other preliminaries are passed as a pipeline in the `TRAX_NER/trainer.py` file.
 
