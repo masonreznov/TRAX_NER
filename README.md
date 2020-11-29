@@ -17,3 +17,12 @@ This repo contains the implementation for named entity recognition (NER) using T
 |-README.md
 |-train.py           -> # link to the TRAX_NER/trainer.py
 ```
+### Usage
+```
+python train.py \
+--output_dir <path/to/output> \
+--vocab_size 32000 \
+--d_model 512 \
+--batch_size 32 \
+--train_steps 100
+```

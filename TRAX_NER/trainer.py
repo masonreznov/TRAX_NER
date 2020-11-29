@@ -20,16 +20,16 @@ import argparse
 def main_train():
     # import the arguments
     parser = argparse.ArgumentParser(description='Create a ArcHydro schema')
-    parser.add_argument('--vocab-size', type=int, required=False,
+    parser.add_argument('--vocab_size', type=int, required=False,
                         help='the input size, if not given the extracted vocab size value is used')
-    parser.add_argument('--d-model', type=int, required=False,
+    parser.add_argument('--d_model', type=int, required=False,
                         help='LSTM embedding and hidden layer dimension')
-    parser.add_argument('--batch-size', type=int, required=True,
+    parser.add_argument('--batch_size', type=int, required=True,
                         help='model batch size')
-    parser.add_argument('--train-steps', type=int, required=False,
+    parser.add_argument('--train_steps', type=int, required=False,
                         help='total training steps, if not given the training will be done for a single step')
                         
-    parser.add_argument('--output-dir', metavar='path', type=str, required=True,
+    parser.add_argument('--output_dir', metavar='path', type=str, required=True,
                         help='output path where model is written')
                         
     args = parser.parse_args()
