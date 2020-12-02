@@ -1,5 +1,5 @@
-import TRAX_NER.trainer
+from TRAX_NER.trainer import main_train
 
 
 if __name__ == '__main__':
-    TRAX_NER.trainer.main_train()
+    main_train()
