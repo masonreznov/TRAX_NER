@@ -1,7 +1,7 @@
 """
 Author: Michael Salam
-Date created: 2020/09/12
-Last modified: 2020/09/12
+Date created: 2020/11/30
+Last modified: 2020/12/05
 Description: Contains the training function for the NER system using LSTM networks with TRAX library
 
 """
