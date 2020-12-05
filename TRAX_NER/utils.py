@@ -1,5 +1,8 @@
 """
-This code is refered from the deeplearning.ai course 'NLP with sequence model' assignment
+Author: Michael Salam
+Date created: 2020/11/30
+Last modified: 2020/12/05
+Description: This code is refered from the deeplearning.ai course 'NLP with sequence model' assignment
 """
 def get_data(url):
     """
